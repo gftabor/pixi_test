@@ -9,13 +9,15 @@ colcon build --symlink-install --event-handlers desktop_notification- --event-ha
 
 
 call install\setup.bat
+set GZ_SIM_SYSTEM_PLUGIN_PATH=C:\Users\tabor\pixi_test\install\gz_ros2_control\bin
 
 ros2 launch gz_ros2_control_demos cart_example_velocity.launch.py
 
-set GZ_SIM_SYSTEM_PLUGIN_PATH=C:\Users\tabor\pixi_test\install\gz_ros2_control\bin
-
-
-
 ```
 
+Second terminal
 
+```
+pixi shell
+ros2 run gz_ros2_control_demos example_position
+```
