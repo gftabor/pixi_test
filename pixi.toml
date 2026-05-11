@@ -1,0 +1,73 @@
+[project]
+name = "mqp"
+version = "0.1.0"
+description = "Development environment for VEX MQP"
+authors = ["Your Name <your.email@example.com>"]
+channels = ["https://prefix.dev/conda-forge","https://prefix.dev/robostack-jazzy"]
+platforms = ["linux-64", "osx-64", "win-64","linux-aarch64"]
+
+
+[dependencies]
+compilers = "*"
+cmake = "*"
+pkg-config = "*"
+make = "*"
+ninja = "*"
+pip = ">=25.1.1,<26"
+
+ros-jazzy-desktop = "*"
+python = "3.12.*"
+setuptools = "<80"
+colcon-common-extensions = "*"
+rosdep = "*"
+ros-jazzy-ament-cmake-google-benchmark = "*"
+ros-jazzy-performance-test-fixture = "*"
+ros-jazzy-mimick-vendor = "*"
+ros-jazzy-ament-cmake-vendor-package = "*"
+ros-jazzy-ament-cmake-clang-format = "*"
+ros-jazzy-test-msgs = "*"
+ros-jazzy-navigation2 = "*"
+ros-jazzy-ros-gz-sim = "*"
+#ros-jazzy-ros-gz-bridge = "*"
+#ros-jazzy-gz-ros2-control = "*"
+ros-jazzy-ackermann-msgs = "*"
+filelock = "*"
+#ros-jazzy-ros2-controllers = "*"
+#ros-jazzy-gz-ros2-control-demos = ">=1.2.17,<2"
+tinyxml2 = ">=11.0.0,<12"
+ros-jazzy-realtime-tools = "*"
+ros-jazzy-control-msgs = ">=5.8.0,<6"
+ros-jazzy-pal-statistics = "*"
+ros-jazzy-rsl = "*"
+ros-jazzy-generate-parameter-library = "*"
+ros-jazzy-xacro = "*"
+ros2-distro-mutex  = "0.14.*"
+ros-jazzy-ros2-control = "*"
+ros-jazzy-joint-limits = "*"
+ros-jazzy-ros2-control-cmake = "*"
+ros-jazzy-control-toolbox = "*"
+ros-jazzy-ros-gz-bridge = "*"
+ros-jazzy-gz-ros2-control-demos ="*"
+ros-jazzy-hardware-interface-testing = ">=4.43.0,<5"
+
+
+[target.linux-aarch64.dependencies]
+ros-jazzy-ros2-control = "*"
+
+
+
+[target.linux-64.dependencies]
+ros-jazzy-ros2-control = "*"
+
+
+[target.win-64.dependencies]
+vs2022_win-64 = "*"  # Uncomment if using Visual Studio 2022
+
+
+
+[activation]
+scripts = ["setup.sh"]
+
+[target.win-64.activation]
+# Overwrite activation scripts only for windows
+scripts = ["setup.bat"]
